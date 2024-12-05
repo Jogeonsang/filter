@@ -1,2 +1,2 @@
-export * from './reset.css?inline';
 export * from './constants';
+export * from './reset.ts';

@@ -1,0 +1,53 @@
+export const FILTER_CONSTANTS = {
+  search_header: [
+    { key: 'occupation', value: '직군' },
+    { key: 'region', value: '지역' },
+    { key: 'employment_type', value: '고용형태' },
+    { key: 'career', value: '경력' },
+    { key: 'working_hours_per_week', value: '주당 업무시간' },
+  ],
+  search_condition: [
+    [
+      { key: 'occupation', value: '경영・비즈니스' },
+      { key: 'occupation', value: 'HR' },
+      { key: 'occupation', value: '금융' },
+      { key: 'occupation', value: '마케팅・광고' },
+      { key: 'occupation', value: '디자인' },
+      { key: 'occupation', value: '테크' },
+      { key: 'occupation', value: '고객서비스・리테일' },
+      { key: 'occupation', value: '영업' },
+      { key: 'occupation', value: '교육' },
+      { key: 'occupation', value: '게임 및 미디어' },
+      { key: 'occupation', value: '제조・생산' },
+      { key: 'occupation', value: '물류・무역' },
+      { key: 'occupation', value: '법률' },
+      { key: 'occupation', value: '식・음료' },
+      { key: 'occupation', value: '기타' },
+    ],
+    [
+      { key: 'region', value: '국내 거주 필수' },
+      { key: 'region', value: '지역 제한 없음' },
+    ],
+    [
+      { key: 'employment_type', value: '정규직' },
+      { key: 'employment_type', value: '계약직' },
+      { key: 'employment_type', value: '프리랜서' },
+    ],
+    [
+      { key: 'career', value: '경력무관' },
+      { key: 'career', value: '신입' },
+      { key: 'career', value: '5년 미만' },
+      { key: 'career', value: '5년 이상' },
+      { key: 'career', value: '10년 미만' },
+      { key: 'career', value: '10년 이상' },
+      { key: 'career', value: '20년 이상' },
+    ],
+    [
+      { key: 'working_hours_per_week', value: '주 20시간 미만' },
+      { key: 'working_hours_per_week', value: '주 20-30시간' },
+      { key: 'working_hours_per_week', value: '주 30-40시간' },
+      { key: 'working_hours_per_week', value: '주 40시간(풀타임)' },
+      { key: 'working_hours_per_week', value: '시간 협의' },
+    ],
+  ],
+} as const;
