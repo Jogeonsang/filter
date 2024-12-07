@@ -31,4 +31,10 @@ const Wrapper = styled.div`
   display: flex;
   width: 100%;
   gap: 24px;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
 `;

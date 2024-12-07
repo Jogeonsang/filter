@@ -92,6 +92,10 @@ const RecurimentWrapper = styled.div`
     0px 0px 24px 0px rgba(0, 0, 0, 0.04);
   height: 100%;
   padding: 40px;
+
+  @media screen and (max-width: 767px) {
+    padding: 24px;
+  }
 `;
 
 const RecurimentItemWrapper = styled.ul`

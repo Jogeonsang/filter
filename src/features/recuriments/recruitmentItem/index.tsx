@@ -3,22 +3,30 @@ import { MapPin } from 'lucide-react';
 
 import { Recruitment } from '~/types/recruitment';
 
-function RecruitmentItem({ title, company_name, country, badge: badgeList }: Recruitment) {
+function RecruitmentItem(props: Recruitment) {
+  const { company_name, title, badge: badgeList, country, image_url } = props;
   return (
     <Wrapper>
-      <Company>{company_name}</Company>
-      <Title>{title}</Title>
+      <InfoSection>
+        <Company>{company_name}</Company>
+        <Title>{title}</Title>
 
-      <BadgeWrapper>
-        {badgeList.map((badge, index) => (
-          <Badge key={index}>{badge}</Badge>
-        ))}
-      </BadgeWrapper>
+        <BadgeWrapper>
+          {badgeList.map((badge, index) => (
+            <Badge key={index}>{badge}</Badge>
+          ))}
+        </BadgeWrapper>
 
-      <Location>
-        <MapPin size={16} fill="white" color="#00c471" />
-        <Country>{country}</Country>
-      </Location>
+        <Location>
+          <MapPin size={16} fill="white" color="#00c471" />
+          <Country>{country}</Country>
+        </Location>
+      </InfoSection>
+      <ActionSection>
+        <div>
+          <img src={image_url} alt={company_name} />
+        </div>
+      </ActionSection>
     </Wrapper>
   );
 }
@@ -27,16 +35,25 @@ export default RecruitmentItem;
 
 const Wrapper = styled.li`
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+
   padding: 12px 0;
   border-bottom: 1px solid #e0e0e0;
+  justify-content: space-between;
 
   &:last-child {
     border-bottom: none;
   }
 `;
 
+const InfoSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
+const ActionSection = styled.div`
+  margin-left: auto;
+`;
 const Title = styled.p`
   font-size: 16px;
   font-weight: 700;

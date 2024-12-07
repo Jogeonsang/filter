@@ -42,9 +42,11 @@ const RootWrapper = styled.div`
   margin: 0px auto;
 
   transition: max-width 0.24s;
+
   /* 모바일 스타일 (768px 미만) */
   @media screen and (max-width: 767px) {
     width: 100%;
     max-width: 100%;
+    min-width: 0;
   }
 `;

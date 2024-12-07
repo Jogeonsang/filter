@@ -19,6 +19,7 @@
     "motion": "^11.13.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-responsive": "^10.0.0",
     "ts-pattern": "^5.5.0",
     "zod": "^3.23.8"
   },
@@ -28,6 +29,7 @@
     "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@types/react-responsive": "^8.0.8",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
     "@vitejs/plugin-react": "^4.3.4",
