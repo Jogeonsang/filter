@@ -2,6 +2,7 @@ import { Recruitment } from '~/types/recruitment';
 
 export const RECRUITMENTS = [
   {
+    id: 1,
     company_name: '회사명1',
     title: '공고 제목1',
     badge: ['국내 거주 필수'],
@@ -16,6 +17,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 2,
     company_name: '회사명2',
     title: '공고 제목2',
     badge: ['국내 거주 필수', '부분원격근무', '주 40시간(풀타임)'],
@@ -30,6 +32,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 3,
     company_name: '회사명3',
     title: '공고 제목3',
     badge: ['국내 거주 필수', '정규직', '주 40시간(풀타임)'],
@@ -44,6 +47,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 4,
     company_name: '회사명4',
     title: '공고 제목4',
     badge: ['부분원격근무', '정규직', '주 40시간(풀타임)'],
@@ -58,6 +62,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 5,
     company_name: '회사명5',
     title: '공고 제목5',
     badge: ['정규직', '주 40시간(풀타임)'],
@@ -72,6 +77,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 6,
     company_name: '회사명6',
     title: '공고 제목6',
     badge: ['국내 거주 필수', '부분원격근무', '정규직'],
@@ -86,6 +92,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 7,
     company_name: '회사명7',
     title: '공고 제목7',
     badge: ['국내 거주 필수', '정규직', '주 40시간(풀타임)'],
@@ -100,6 +107,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 8,
     company_name: '회사명8',
     title: '공고 제목8',
     badge: ['국내 거주 필수', '부분원격근무', '정규직'],
@@ -114,6 +122,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 9,
     company_name: '회사명9',
     title: '공고 제목9',
     badge: ['국내 거주 필수', '유연근무', '정규직', '주 40시간(풀타임)'],
@@ -128,6 +137,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 10,
     company_name: '회사명10',
     title: '공고 제목10',
     badge: ['국내 거주 필수', '부분원격근무', '정규직', '주 40시간(풀타임)'],
@@ -142,6 +152,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 11,
     company_name: '회사명11',
     title: '공고 제목11',
     badge: ['국내 거주 필수'],
@@ -156,6 +167,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 12,
     company_name: '회사명12',
     title: '공고 제목12',
     badge: ['국내 거주 필수', '부분원격근무', '주 40시간(풀타임)'],
@@ -170,6 +182,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 13,
     company_name: '회사명13',
     title: '공고 제목13',
     badge: ['국내 거주 필수', '정규직', '주 40시간(풀타임)'],
@@ -184,6 +197,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간 미만',
   },
   {
+    id: 14,
     company_name: '테크스타트업',
     title: '시니어 프론트엔드 개발자 (React)',
     badge: ['100% 원격근무', '정규직', '주 40시간(풀타임)'],
@@ -198,6 +212,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 15,
     company_name: '글로벌커머스',
     title: '데이터 분석가 (신입 가능)',
     badge: ['유연근무', '정규직'],
@@ -212,6 +227,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 16,
     company_name: '핀테크솔루션',
     title: '백엔드 개발자 (Python/Django)',
     badge: ['부분원격근무', '정규직', '주 40시간(풀타임)'],
@@ -226,6 +242,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 17,
     company_name: '에듀테크코리아',
     title: '프로덕트 매니저 (PM)',
     badge: ['국내 거주 필수', '정규직'],
@@ -240,6 +257,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 18,
     company_name: '메디컬AI',
     title: 'AI 리서치 엔지니어',
     badge: ['100% 원격근무', '정규직', '주 40시간(풀타임)'],
@@ -254,6 +272,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 19,
     company_name: '글로벌마케팅그룹',
     title: '디지털 마케팅 매니저',
     badge: ['유연근무', '정규직'],
@@ -268,6 +287,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 20,
     company_name: '클라우드서비스',
     title: 'DevOps 엔지니어',
     badge: ['부분원격근무', '정규직', '주 40시간(풀타임)'],
@@ -282,6 +302,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 21,
     company_name: '헬스케어스타트업',
     title: '헬스케어 컨설턴트',
     badge: ['국내 거주 필수', '계약직'],
@@ -296,6 +317,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 30-40시간',
   },
   {
+    id: 22,
     company_name: '에너지솔루션',
     title: '에너지 분석가',
     badge: ['100%원격근무', '프리랜서'],
@@ -310,6 +332,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 20-30시간',
   },
   {
+    id: 23,
     company_name: '모바일게임사',
     title: '게임 디자이너',
     badge: ['부분원격근무', '정규직'],
@@ -324,6 +347,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 24,
     company_name: '로봇공학연구소',
     title: '로봇 소프트웨어 엔지니어',
     badge: ['국내 거주 필수', '정규직'],
@@ -338,6 +362,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 25,
     company_name: '블록체인스타트업',
     title: '블록체인 개발자',
     badge: ['100%원격근무', '정규직'],
@@ -352,6 +377,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 26,
     company_name: '자동차제조사',
     title: '자동차 엔지니어',
     badge: ['부분원격근무', '계약직'],
@@ -366,6 +392,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 27,
     company_name: '패션브랜드',
     title: '패션 디자이너',
     badge: ['국내 거주 필수', '정규직'],
@@ -380,6 +407,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 28,
     company_name: '우주항공기업',
     title: '항공우주 엔지니어',
     badge: ['100%원격근무', '정규직'],
@@ -394,6 +422,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 29,
     company_name: '바이오테크',
     title: '생명공학 연구원',
     badge: ['부분원격근무', '정규직'],
@@ -408,6 +437,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 30,
     company_name: '스마트홈솔루션',
     title: 'IoT 개발자',
     badge: ['국내 거주 필수', '정규직'],
@@ -422,6 +452,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 31,
     company_name: '에듀테크스타트업',
     title: '교육 콘텐츠 개발자',
     badge: ['100%원격근무', '계약직'],
@@ -436,6 +467,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 30-40시간',
   },
   {
+    id: 32,
     company_name: '모바일앱개발사',
     title: '모바일 앱 디자이너',
     badge: ['부분원격근무', '정규직'],
@@ -450,6 +482,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 33,
     company_name: '헬스케어AI',
     title: 'AI 엔지니어',
     badge: ['국내 거주 필수', '정규직'],
@@ -464,6 +497,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 34,
     company_name: '핀테크스타트업',
     title: '프론트엔드 개발자',
     badge: ['100%원격근무', '계약직'],
@@ -478,6 +512,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 35,
     company_name: '글로벌컨설팅',
     title: '비즈니스 컨설턴트',
     badge: ['부분원격근무', '정규직'],
@@ -492,6 +527,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 36,
     company_name: '에너지스타트업',
     title: '에너지 솔루션 엔지니어',
     badge: ['국내 거주 필수', '정규직'],
@@ -506,6 +542,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 37,
     company_name: '모바일게임기업',
     title: '게임 아티스트',
     badge: ['100%원격근무', '정규직'],
@@ -520,6 +557,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 38,
     company_name: '로봇공학기업',
     title: '로봇 하드웨어 엔지니어',
     badge: ['부분원격근무', '계약직'],
@@ -534,6 +572,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 39,
     company_name: '패션스타트업',
     title: '패션 마케팅 매니저',
     badge: ['국내 거주 필수', '정규직'],
@@ -548,6 +587,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 40,
     company_name: '우주항공기업',
     title: '항공우주 연구개발 엔지니어',
     badge: ['100%원격근무', '정규직'],
@@ -562,6 +602,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 41,
     company_name: '바이오기업',
     title: '생명공학 연구원',
     badge: ['부분원격근무', '정규직'],
@@ -576,6 +617,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 42,
     company_name: '스마트홈기업',
     title: 'IoT 시스템 엔지니어',
     badge: ['국내 거주 필수', '정규직'],
@@ -590,6 +632,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 43,
     company_name: '에듀테크스타트업',
     title: '교육 콘텐츠 매니저',
     badge: ['100%원격근무', '계약직'],
@@ -604,6 +647,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 30-40시간',
   },
   {
+    id: 44,
     company_name: '모바일앱기업',
     title: '모바일 앱 개발자',
     badge: ['부분원격근무', '정규직'],
@@ -618,6 +662,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 45,
     company_name: '헬스케어기업',
     title: '헬스케어 솔루션 개발자',
     badge: ['국내 거주 필수', '정규직'],
@@ -632,6 +677,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 46,
     company_name: '핀테크스타트업',
     title: '데이터 엔지니어',
     badge: ['100%원격근무', '계약직'],
@@ -646,6 +692,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 47,
     company_name: '글로벌컨설팅기업',
     title: 'IT 컨설턴트',
     badge: ['부분원격근무', '정규직'],
@@ -660,6 +707,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 48,
     company_name: '에너지스타트업',
     title: '에너지 데이터 분석가',
     badge: ['국내 거주 필수', '정규직'],
@@ -674,6 +722,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 49,
     company_name: '모바일게임기업',
     title: '게임 프로듀서',
     badge: ['100%원격근무', '정규직'],
@@ -688,6 +737,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 50,
     company_name: '로봇공학기업',
     title: '로봇 소프트웨어 개발자',
     badge: ['부분원격근무', '계약직'],
@@ -702,6 +752,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 51,
     company_name: '패션기업',
     title: '패션 마케팅 매니저',
     badge: ['국내 거주 필수', '정규직'],
@@ -716,6 +767,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 52,
     company_name: '우주항공스타트업',
     title: '항공우주 시스템 엔지니어',
     badge: ['100%원격근무', '정규직'],
@@ -730,6 +782,7 @@ export const RECRUITMENTS = [
     working_hours_per_week: '주 40시간(풀타임)',
   },
   {
+    id: 53,
     company_name: '바이오기업',
     title: '생명공학 연구원',
     badge: ['부분원격근무', '정규직'],

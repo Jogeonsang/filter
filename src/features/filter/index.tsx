@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUp } from 'lucide-react';
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
 import { Checkbox } from '~/components/checkbox';
 import Collapse from '~/components/collapse';

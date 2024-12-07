@@ -1,10 +1,17 @@
 import styled from '@emotion/styled';
-import { MapPin } from 'lucide-react';
+import { Heart, MapPin } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
+import { useLikeStore } from '~/stores/likes';
 import { Recruitment } from '~/types/recruitment';
 
 function RecruitmentItem(props: Recruitment) {
-  const { company_name, title, badge: badgeList, country, image_url } = props;
+  const { id, company_name, title, badge: badgeList, country } = props;
+  const { toggleLike, isLiked } = useLikeStore();
+
+  const handleToggleLike = () => {
+    toggleLike(id);
+  };
   return (
     <Wrapper>
       <InfoSection>
@@ -23,9 +30,29 @@ function RecruitmentItem(props: Recruitment) {
         </Location>
       </InfoSection>
       <ActionSection>
-        <div>
-          <img src={image_url} alt={company_name} />
-        </div>
+        <LikeButton onClick={handleToggleLike} aria-label={isLiked(id) ? '좋아요 취소' : '좋아요'}>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={isLiked(id) ? 'liked' : 'unliked'}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Heart
+                size={24}
+                fill={isLiked(id) ? '#00c471' : 'transparent'}
+                color={isLiked(id) ? 'white' : '#00c471'}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </LikeButton>
+        <ImageWrapper>
+          <img
+            src={`https://api.dicebear.com/9.x/glass/svg?seed=${company_name}`}
+            alt={company_name}
+          />
+        </ImageWrapper>
       </ActionSection>
     </Wrapper>
   );
@@ -39,6 +66,7 @@ const Wrapper = styled.li`
   padding: 12px 0;
   border-bottom: 1px solid #e0e0e0;
   justify-content: space-between;
+  gap: 12px;
 
   &:last-child {
     border-bottom: none;
@@ -52,7 +80,26 @@ const InfoSection = styled.div`
 `;
 
 const ActionSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
   margin-left: auto;
+`;
+
+const ImageWrapper = styled.div`
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  overflow: hidden;
+`;
+
+const LikeButton = styled(motion.button)`
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const Title = styled.p`
   font-size: 16px;
@@ -69,6 +116,11 @@ const BadgeWrapper = styled.div`
   gap: 8px;
   flex-wrap: wrap;
   margin: 8px 0;
+
+  @media screen and (max-width: 768px) {
+    gap: 4px;
+    margin: 4px 0;
+  }
 `;
 
 const Badge = styled.span`
@@ -100,6 +152,11 @@ const Badge = styled.span`
   box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.02),
     0 1px 2px rgba(0, 0, 0, 0.03);
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
 `;
 
 const Location = styled.div`

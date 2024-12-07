@@ -11,6 +11,7 @@ export type FilterBadge =
   | '시간 협의';
 
 export type Recruitment = {
+  id: number;
   company_name: string;
   title: string;
   badge: FilterBadge[];
