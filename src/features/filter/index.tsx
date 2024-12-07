@@ -1,49 +1,30 @@
 import styled from '@emotion/styled';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronUp } from 'lucide-react';
+import { ChevronUp, RotateCcw } from 'lucide-react';
 import { useLayoutEffect, useState } from 'react';
 
 import { Checkbox } from '~/components/checkbox';
 import Collapse from '~/components/collapse';
 import { FILTER_CONSTANTS } from '~/constants/filter';
 import useDevice from '~/hooks/useDevice';
-import { FilterOptions } from '~/types/recruitment';
+import { useFilterStore } from '~/stores/filter';
 
-interface FilterProps {
-  filterOptions: FilterOptions;
-  onFilterChange: (options: FilterOptions) => void;
-}
-
-function Filter({ filterOptions, onFilterChange }: FilterProps) {
+function Filter() {
   const { isMobile } = useDevice();
   const [isOpen, setIsOpen] = useState(isMobile);
-  const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>(
-    FILTER_CONSTANTS.search_header.reduce(
-      (acc, header) => ({
-        ...acc,
-        [header.key]: false,
-      }),
-      {},
-    ),
-  );
-
-  const toggleSection = (key: string) => {
-    setOpenSections(prev => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
-  };
-
-  const handleOptionChange = (headerKey: string, optionValue: string) => {
-    onFilterChange({
-      ...filterOptions,
-      [headerKey]: filterOptions[headerKey] === optionValue ? '' : optionValue,
-    });
-  };
+  const { filterOptions, openSections, updateFilter, toggleSection, resetFilter } =
+    useFilterStore();
 
   useLayoutEffect(() => {
     setIsOpen(!isMobile);
   }, [isMobile]);
+
+  const handleOptionChange = (headerKey: string, optionValue: string) => {
+    updateFilter({
+      ...filterOptions,
+      [headerKey]: filterOptions[headerKey] === optionValue ? '' : optionValue,
+    });
+  };
 
   return (
     <Wrapper>
@@ -60,7 +41,17 @@ function Filter({ filterOptions, onFilterChange }: FilterProps) {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2, ease: 'easeInOut' }}
           >
-            <Title>채용공고 검색 조건</Title>
+            <TitleWrapper>
+              <Title>채용공고 검색 조건</Title>
+              <IconButton onClick={resetFilter} whileTap={{ rotate: -30 }}>
+                <RotateCcw
+                  size={20}
+                  color={
+                    Object.values(filterOptions).some(value => value !== '') ? '#00c471' : '#999'
+                  }
+                />
+              </IconButton>
+            </TitleWrapper>
             {FILTER_CONSTANTS.search_header.map((header, index) => (
               <Section key={index}>
                 <SectionHeader onClick={() => toggleSection(header.key)}>
@@ -125,7 +116,19 @@ const Wrapper = styled.nav`
     width: 100%;
     max-width: 100%;
     height: auto;
+    gap: 24px;
   }
+`;
+
+const TitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+`;
+
+const IconButton = styled(motion.button)`
+  cursor: pointer;
 `;
 
 const FilterOpenButton = styled.button`
@@ -134,13 +137,11 @@ const FilterOpenButton = styled.button`
   border-radius: 4px;
   padding: 8px 12px;
   color: #00c471;
-  margin-bottom: 20px;
 `;
 
 const Title = styled.h3`
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 20px;
 `;
 
 const Section = styled.div`

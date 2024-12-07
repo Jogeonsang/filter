@@ -5,18 +5,15 @@ import { match } from 'ts-pattern';
 import { RECRUITMENTS } from '~/constants/recruments';
 import { isCareerMatch } from '~/constants/util/recruiment';
 import { useIntersectionObserver } from '~/hooks/useIntersectionObserver';
-import { FilterOptions } from '~/types/recruitment';
+import { useFilterStore } from '~/stores/filter';
 
 import EmptyRecruitments from './empty';
 import RecruitmentItem from './recruitmentItem';
 
-interface RecurimentsProps {
-  filterOptions: FilterOptions;
-}
-
-function Recuriments({ filterOptions }: RecurimentsProps) {
+function Recuriments() {
   const [page, setPage] = useState(1);
   const containerRef = useRef<HTMLDivElement>(null);
+  const { filterOptions } = useFilterStore();
 
   useEffect(() => {
     // 필터 조건이 변경되면 페이지를 초기화

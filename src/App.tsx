@@ -1,25 +1,15 @@
 import styled from '@emotion/styled';
-import { useState } from 'react';
 
 import { CommonLayout } from './components/layout';
 import Filter from './features/filter';
 import Recuriments from './features/recuriments';
-import { FilterOptions } from './types/recruitment';
 
 function App() {
-  const [filterOptions, setFilterOptions] = useState<FilterOptions>({
-    region: '',
-    employment_type: '',
-    career: '',
-    working_hours_per_week: '',
-    occupation: '',
-  });
-
   return (
     <CommonLayout>
       <Wrapper>
-        <Filter filterOptions={filterOptions} onFilterChange={setFilterOptions} />
-        <Recuriments filterOptions={filterOptions} />
+        <Filter />
+        <Recuriments />
       </Wrapper>
     </CommonLayout>
   );
